@@ -22,46 +22,47 @@
         <h3 class="info">This is not a real online service! You know you need something like this in your life to help
             you
             realize your deepest dreams. Sign up <span class="emphasized">now</span> to get started.</h3>
+            <h3 class="info">You <span class="emphasized">know</span> you want to.</h3>     
         <div class="form-container">
-
-            <h3 class="info">You <span class="emphasized">know</span> you want to.</h3>
-            <form action="" method="post">
-                <h3>Let's do this!</h3>
+            <form id="createAcc" action="" method="post">
+                <h3 id="formTitle">Let's do this!</h3>
                 <fieldset>
                     <div class="field">
                         <label for="firstName">FIRST NAME</label>
-                        <input type="text" name="firstName" id="firstName">
+                        <input type="text" name="firstName" id="firstName" required>
                     </div>
                     <div class="field">
                         <label for="lastName">LAST NAME</label>
-                        <input type="text" name="lastName" id="lastName">
+                        <input type="text" name="lastName" id="lastName" required>
                     </div>
 
                 </fieldset>
                 <fieldset>
                     <div class="field">
                         <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div class="field">
                         <label for="phone">PHONE NUMBER</label>
-                        <input type="number" name="phone" id="phone">
+                        <input type="number" name="phone" id="phone" required>
                     </div>
                 </fieldset>
                 <fieldset>
                     <div class="field">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" class="error" name="password" id="password" minlength="8" required>
+                        <p class="error-message">*Passwords do not match</p>
                     </div>
                     <div class="field">
                         <label for="Cpassword">CONFIRM PASSWORD</label>
-                        <input type="password" name="c-password" id="Cpassword">
+                        <input type="password" class="error" name="c-password" id="Cpassword" required>
                     </div>
                 </fieldset>
             </form>
-            <button>Create Account</button>
-            <div class="login">Already have an account? <a href="">Log in</a></div>
+
         </div>
+        <button type="submit" form="createAcc" id="create">Create Account</button>
+        <div class="login">Already have an account? <a href="">Log in</a></div>
     </div>
 </body>
 
